@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Define the candidates
-candidates = ["Candidate 1", "Candidate 2", "Candidate 3"]
+candidates = ["Happygod", "Pendo", "Johannes"]
 
 # Define an empty dictionary to store the votes
 votes = {}
@@ -32,14 +32,15 @@ def main():
             st.error("You have not voted yet.")
 
     if st.button("Display Results"):
-        if votes:
-            result_text = "Vote results:\n"
-            for candidate in candidates:
-                vote_count = list(votes.values()).count(candidate)
-                result_text += f"{candidate}: {vote_count}\n"
-            st.write(result_text)
-        else:
-            st.warning("No votes cast yet.")
+    if len(votes) > 0:
+        result_text = "Vote results:\n"
+        for candidate in candidates:
+            vote_count = list(votes.values()).count(candidate)
+            result_text += f"{candidate}: {vote_count}\n"
+        st.write(result_text)
+    else:
+        st.warning("No votes cast yet.")
+
 
 if __name__ == "__main__":
     main()
