@@ -35,11 +35,11 @@ def main():
         if len(votes) > 0:
         result_text = "Vote results:\n"
         for candidate in candidates:
-            vote_count = list(votes.values()).count(candidate)
-                result_text += f"{candidate}: {vote_count}\n"
-        st.write(result_text)
-    else:
-        st.warning("No votes cast yet.")
+                    vote_count = list(votes.values()).count(candidate)
+                    result_text += f"{candidate}: {vote_count}\n"
+                st.write(result_text)
+            else:
+                st.warning("No votes cast yet.")
 
 
 if __name__ == "__main__":
