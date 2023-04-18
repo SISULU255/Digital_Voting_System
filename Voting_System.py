@@ -32,7 +32,7 @@ def main():
             st.error("You have not voted yet.")
 
     if st.button("Display Results"):
-    if len(votes) > 0:
+        if len(votes) > 0:
         result_text = "Vote results:\n"
         for candidate in candidates:
             vote_count = list(votes.values()).count(candidate)
