@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Define the candidates
-candidates = ["Happygod", "Pendo", "Johannes"]
+candidates = [" ",Happygod", "Pendo", "Johannes"]
 
 # Define an empty dictionary to store the votes
 votes = {}
