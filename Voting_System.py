@@ -36,7 +36,7 @@ def main():
         result_text = "Vote results:\n"
         for candidate in candidates:
             vote_count = list(votes.values()).count(candidate)
-            result_text += f"{candidate}: {vote_count}\n"
+                result_text += f"{candidate}: {vote_count}\n"
         st.write(result_text)
     else:
         st.warning("No votes cast yet.")
